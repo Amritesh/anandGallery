@@ -27,7 +27,7 @@ export const Navbar = ({
         className={classes.flex}
         component={Link}
         to={authExists ? LIST_PATH : '/'}>
-        material
+        Anand Gallery
       </Typography>
       {authExists ? (
         <AccountMenu

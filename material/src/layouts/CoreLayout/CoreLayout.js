@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Navbar from 'containers/Navbar'
+import SideMenu from 'containers/SideMenu'
 import { Notifications } from 'modules/notification'
 
 export const CoreLayout = ({ children, classes }) => (
   <div className={classes.container}>
     <Navbar />
+    <SideMenu />
     <div className={classes.children}>{children}</div>
     <Notifications />
   </div>
