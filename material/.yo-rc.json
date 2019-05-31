@@ -1,0 +1,16 @@
+{
+  "generator-react-firebase": {
+    "promptValues": {
+      "githubUser": "amritesh",
+      "firebaseName": "anandmuseum",
+      "firebaseKey": "AIzaSyCu0U3Ov6RQJIrpnk6syc0asXHYmIq0Qzc",
+      "includeRedux": true,
+      "includeFirestore": false,
+      "otherFeatures": [
+        "Config for Continuous Integration"
+      ],
+      "ciProvider": "gitlab",
+      "deployTo": "firebase"
+    }
+  }
+}
