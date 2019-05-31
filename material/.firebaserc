@@ -9,7 +9,7 @@
       "master": {
         "env": "staging",
         "firebase": {
-          "apiKey": "${STAGE_FIREBASE_API_KEY}",
+          "apiKey": "AIzaSyCu0U3Ov6RQJIrpnk6syc0asXHYmIq0Qzc",
           "authDomain": "anandmuseum.firebaseapp.com",
           "databaseURL": "https://anandmuseum.firebaseio.com",
           "projectId": "anandmuseum",
@@ -19,7 +19,7 @@
       "prod": {
         "env": "production",
         "firebase": {
-          "apiKey": "${PROD_FIREBASE_API_KEY}",
+          "apiKey": "AIzaSyCu0U3Ov6RQJIrpnk6syc0asXHYmIq0Qzc",
           "authDomain": "anandmuseum.firebaseapp.com",
           "databaseURL": "https://anandmuseum.firebaseio.com",
           "projectId": "anandmuseum",
