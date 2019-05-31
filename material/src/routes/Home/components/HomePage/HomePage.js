@@ -91,6 +91,7 @@ export const Home = ({ classes }) => (
   </div>
 )
 
+// eslint-disable-next-line react/no-typos
 Home.proptypes = {
   classes: PropTypes.object.isRequired // from enhancer (withStyles)
 }
