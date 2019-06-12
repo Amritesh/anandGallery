@@ -8,8 +8,7 @@ export const CoreLayout = ({ children, classes }) => (
   <div className={classes.container}>
     <Navbar />
     <SideMenu />
-    <div className={classes.children}>{children}</div>
-    <Notifications />
+    <div className={classes.children}> {children} </div> <Notifications />
   </div>
 )
 

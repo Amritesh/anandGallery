@@ -1,6 +1,6 @@
 import { connectedRouterRedirect } from 'redux-auth-wrapper/history4/redirect'
 import locationHelperBuilder from 'redux-auth-wrapper/history4/locationHelper'
-import createHistory from 'history/createBrowserHistory'
+import { createBrowserHistory as createHistory } from 'history'
 import LoadingSpinner from 'components/LoadingSpinner'
 import { LIST_PATH } from 'constants/paths'
 
@@ -30,7 +30,9 @@ export const UserIsAuthenticated = connectedRouterRedirect({
     history.push(newLoc)
     dispatch({
       type: UNAUTHED_REDIRECT,
-      payload: { message: 'User is not authenticated.' }
+      payload: {
+        message: 'User is not authenticated.'
+      }
     })
   }
 })
@@ -58,7 +60,9 @@ export const UserIsNotAuthenticated = connectedRouterRedirect({
     history.push(newLoc)
     dispatch({
       type: AUTHED_REDIRECT,
-      payload: { message: 'User is not authenticated.' }
+      payload: {
+        message: 'User is not authenticated.'
+      }
     })
   }
 })

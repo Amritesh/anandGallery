@@ -2,24 +2,22 @@ import React, { Component } from 'react'
 import Drawer from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
 import { isEmpty } from 'react-redux-firebase'
-import UserView from './userView'
-import { PrivateLinks } from './PrivateLinks'
-import { closeSideMenuIfOpen, signOut } from './functions/'
-
 class SideMenu extends Component {
   render() {
-    const { open, auth, role } = this.props
-
+    const { auth } = this.props
     return (
-      <Drawer open={open} anchor={'left'} onClick={closeSideMenuIfOpen(this)}>
+      <Drawer anchor={'left'}>
+        {' '}
         {isEmpty(auth) ? null : (
           <div>
-            <UserView />
-            <List onClick={closeSideMenuIfOpen(this)} style={{ width: 300 }}>
-              <PrivateLinks role={role} signOut={signOut(this)} />
-            </List>
+            <List
+              style={{
+                width: 300
+              }}
+            />{' '}
+            {'Amritesh'}{' '}
           </div>
-        )}
+        )}{' '}
       </Drawer>
     )
   }
