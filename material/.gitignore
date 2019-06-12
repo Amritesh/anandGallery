@@ -9,5 +9,5 @@
 
 # React App
 **/dist
-src/config.js
+# src/config.js
 .env
