@@ -5,12 +5,23 @@ import MenuItem from '@material-ui/core/MenuItem'
 import IconButton from '@material-ui/core/IconButton'
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import { withStyles } from '@material-ui/core/styles'
+import Avatar from '@material-ui/core/Avatar'
 
 const styles = {
   buttonRoot: {
     color: 'white'
+  },
+  avatar: {
+    margin: 0
   }
 }
+
+const ProfileIcon = ({ avatarUrl, displayName, classes }) =>
+  avatarUrl ? (
+    <Avatar alt="Remy Sharp" src={avatarUrl} className={classes.avatar} />
+  ) : (
+    <AccountCircle />
+  )
 
 const AccountMenu = ({
   avatarUrl,
@@ -28,7 +39,11 @@ const AccountMenu = ({
       aria-haspopup="true"
       onClick={handleMenu}
       classes={{ root: classes.buttonRoot }}>
-      <AccountCircle />
+      <ProfileIcon
+        avatarUrl={avatarUrl}
+        displayName={displayName}
+        classes={classes}
+      />
     </IconButton>
     <Menu
       id="menu-appbar"
