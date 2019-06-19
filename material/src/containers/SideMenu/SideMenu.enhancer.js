@@ -48,6 +48,13 @@ export default compose(
     goToAccount: props => () => {
       props.history.push(ACCOUNT_PATH)
       props.closeAccountMenu()
+    },
+    closeSideMenuIfOpen: props => () => {
+      const { open } = props
+      open &&
+        props.dispatch({
+          type: 'CLOSE_SIDE_MENU'
+        })
     }
   }),
   // Add custom props

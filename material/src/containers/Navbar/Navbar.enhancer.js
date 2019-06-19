@@ -4,20 +4,13 @@ import {
   compose,
   withProps,
   flattenProp,
-  withStateHandlers,
-  withReducer
+  withStateHandlers
 } from 'recompose'
 import { withStyles } from '@material-ui/core/styles'
 import { withRouter } from 'react-router-dom'
 import { withFirebase, isEmpty, isLoaded } from 'react-redux-firebase'
 import { ACCOUNT_PATH } from 'constants/paths'
 import styles from './Navbar.styles'
-
-const openSidebar = (param, tt) => {
-  return {
-    sidebarOpen: param
-  }
-}
 
 export default compose(
   // Map redux state to props
@@ -60,7 +53,6 @@ export default compose(
         type: 'TOGGLE_SIDE_MENU'
       })
   }),
-  withReducer('counter', 'dispatch', openSidebar, 0),
   // Add custom props
   withProps(({ auth }) => ({
     authExists: isLoaded(auth) && !isEmpty(auth)

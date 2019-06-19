@@ -1,27 +1,38 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Drawer from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
-import { isEmpty } from 'react-redux-firebase'
-import { closeSideMenuIfOpen } from './functions/'
-class SideMenu extends Component {
-  render() {
-    const { open, auth } = this.props
-    return (
-      <Drawer open={open} onClick={closeSideMenuIfOpen(this)} anchor={'left'}>
-        {' '}
-        {isEmpty(auth) ? null : (
-          <div>
-            <List
-              style={{
-                width: 300
-              }}
-            />{' '}
-            {'Amritesh'}{' '}
-          </div>
-        )}{' '}
-      </Drawer>
-    )
-  }
+
+export const SideMenu = ({
+  open,
+  authExists,
+  classes,
+  closeSideMenuIfOpen
+}) => (
+  <Drawer
+    open={open}
+    onClick={closeSideMenuIfOpen}
+    anchor={'left'}
+    variant="persistent">
+    <div className={classes.toolbar} />
+    {!authExists ? null : (
+      <div>
+        <List
+          style={{
+            width: 300
+          }}
+        />{' '}
+        {'Amritesh'}{' '}
+      </div>
+    )}{' '}
+  </Drawer>
+)
+
+SideMenu.propTypes = {
+  open: PropTypes.bool,
+  authExists: PropTypes.bool,
+  classes: PropTypes.object,
+  closeSideMenuIfOpen: PropTypes.func
 }
 
 export default SideMenu

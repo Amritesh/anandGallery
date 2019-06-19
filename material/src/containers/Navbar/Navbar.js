@@ -22,7 +22,7 @@ export const Navbar = ({
   classes,
   toggleSideMenu
 }) => (
-  <AppBar position="static">
+  <AppBar className={classes.navBar}>
     <Toolbar>
       <IconButton
         edge="start"
