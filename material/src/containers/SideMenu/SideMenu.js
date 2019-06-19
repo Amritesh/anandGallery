@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import Drawer from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
 import { isEmpty } from 'react-redux-firebase'
+import { closeSideMenuIfOpen } from './functions/'
 class SideMenu extends Component {
   render() {
-    const { auth } = this.props
+    const { open, auth } = this.props
     return (
-      <Drawer anchor={'left'}>
+      <Drawer open={open} onClick={closeSideMenuIfOpen(this)} anchor={'left'}>
         {' '}
         {isEmpty(auth) ? null : (
           <div>

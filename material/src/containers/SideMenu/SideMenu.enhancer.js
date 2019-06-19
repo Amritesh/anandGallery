@@ -14,9 +14,10 @@ import styles from './SideMenu.styles'
 
 export default compose(
   // Map redux state to props
-  connect(({ firebase: { auth, profile } }) => ({
+  connect(({ firebase: { auth, profile }, sideMenu: { open } }) => ({
     auth,
-    profile
+    profile,
+    open
   })),
   // State handlers as props
   withStateHandlers(

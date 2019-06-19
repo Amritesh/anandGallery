@@ -3,6 +3,7 @@ import { firebaseReducer as firebase } from 'react-redux-firebase'
 import { reducer as form } from 'redux-form'
 import { reducer as notifications } from 'modules/notification'
 import locationReducer from './location'
+import sideMenuReducer from './sideMenu'
 
 export function makeRootReducer(asyncReducers) {
   return combineReducers({
@@ -11,6 +12,7 @@ export function makeRootReducer(asyncReducers) {
     form,
     notifications,
     location: locationReducer,
+    sideMenu: sideMenuReducer,
     ...asyncReducers
   })
 }

@@ -1,4 +1,4 @@
-export const env = 'staging'
+export const env = 'local'
 
 export const firebase = {
   apiKey: 'AIzaSyCu0U3Ov6RQJIrpnk6syc0asXHYmIq0Qzc',

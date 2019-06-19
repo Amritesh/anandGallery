@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography'
 import { LIST_PATH } from 'constants/paths'
 import AccountMenu from './AccountMenu'
 import LoginMenu from './LoginMenu'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
 
 export const Navbar = ({
   avatarUrl,
@@ -17,10 +19,20 @@ export const Navbar = ({
   closeAccountMenu,
   anchorEl,
   handleMenu,
-  classes
+  classes,
+  toggleSideMenu
 }) => (
   <AppBar position="static">
     <Toolbar>
+      <IconButton
+        edge="start"
+        color="inherit"
+        aria-label="Menu"
+        onClick={() => {
+          toggleSideMenu()
+        }}>
+        <MenuIcon />
+      </IconButton>
       <Typography
         variant="h6"
         color="inherit"
