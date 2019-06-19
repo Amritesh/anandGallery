@@ -14,11 +14,9 @@ import { ACCOUNT_PATH } from 'constants/paths'
 import styles from './Navbar.styles'
 
 const openSidebar = (param, tt) => {
-  console.log('gogo');
-  debugger
-  // return {
-  //   sidebarOpen: param
-  // }
+  return {
+    sidebarOpen: param
+  }
 }
 
 export default compose(
