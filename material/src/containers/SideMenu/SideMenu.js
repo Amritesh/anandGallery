@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Drawer from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
+import PublicLinks from 'containers/PublicLinks'
 
 export const SideMenu = ({
   open,
@@ -9,22 +10,19 @@ export const SideMenu = ({
   classes,
   closeSideMenuIfOpen
 }) => (
-  <Drawer
-    open={open}
-    onClick={closeSideMenuIfOpen}
-    anchor={'left'}
-    variant="persistent">
+  <Drawer open={open} anchor={'left'} variant="persistent">
     <div className={classes.toolbar} />
-    {!authExists ? null : (
+    {!authExists ? (
+      <List style={{ width: 300 }}>
+        <PublicLinks />
+      </List>
+    ) : (
       <div>
-        <List
-          style={{
-            width: 300
-          }}
-        />{' '}
-        {'Amritesh'}{' '}
+        <List style={{ width: 300 }}>
+          <PublicLinks />
+        </List>
       </div>
-    )}{' '}
+    )}
   </Drawer>
 )
 

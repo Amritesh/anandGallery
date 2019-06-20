@@ -1,3 +1,7 @@
+export const HOME_PATH = '/'
+export const NUMISMATICS_PATH = '/numismatics'
+export const PHILATELY_PATH = '/philately'
+export const GARDENING_PATH = '/gardening'
 export const LIST_PATH = '/projects'
 export const ACCOUNT_PATH = '/account'
 export const LOGIN_PATH = '/login'

@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-import { LIST_PATH } from 'constants/paths'
+import Card from 'containers/Card'
 
 export const Home = ({ classes }) => (
   <div className={classes.root}>
-    <Link to={LIST_PATH}>Projects</Link>
+    <Card />
   </div>
 )
 
