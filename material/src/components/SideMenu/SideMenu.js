@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Drawer from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
-import PublicLinks from 'containers/PublicLinks'
+import PublicLinks from 'components/PublicLinks'
 
 export const SideMenu = ({
   open,

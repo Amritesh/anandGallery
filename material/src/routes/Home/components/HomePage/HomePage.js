@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Card from 'containers/Card'
+import Card from 'components/Card'
 
 export const Home = ({ classes }) => (
   <div className={classes.root}>

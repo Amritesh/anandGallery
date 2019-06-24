@@ -44,7 +44,7 @@ export const RecipeCard = ({ expanded, handleExpandClick, classes }) => (
         mussels, if you like.
       </Typography>
     </CardContent>
-    <CardActions disableSpacing>
+    <CardActions>
       <IconButton aria-label="Add to favorites">
         <FavoriteIcon />
       </IconButton>

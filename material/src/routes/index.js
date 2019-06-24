@@ -6,6 +6,7 @@ import LoginRoute from './Login'
 import SignupRoute from './Signup'
 import ProjectsRoute from './Projects'
 import AccountRoute from './Account'
+import CollectionRoutes from './Collection'
 import NotFoundRoute from './NotFound'
 
 export default function createRoutes(store) {
@@ -13,13 +14,12 @@ export default function createRoutes(store) {
     <CoreLayout>
       <Switch>
         <Route exact path={Home.path} component={Home.component} />
-        {/* Build Route components from routeSettings */
-        [
+        {[
           AccountRoute,
           ProjectsRoute,
           SignupRoute,
-          LoginRoute
-          /* Add More Routes Here */
+          LoginRoute,
+          ...CollectionRoutes
         ].map((settings, index) => (
           <Route key={`Route-${index}`} {...settings} />
         ))}

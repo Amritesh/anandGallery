@@ -7,7 +7,7 @@ import { env } from './config'
 import './index.css'
 
 // import * as serviceWorker from './serviceWorker'
-import App from './containers/App'
+import App from './components/App'
 
 // Window Variables
 // ------------------------------------
