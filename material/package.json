@@ -56,7 +56,7 @@
     "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "7.11.1",
     "husky": "^0.14.3",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.13.1",
     "prettier": "^1.14.3"
   },
   "eslintConfig": {
